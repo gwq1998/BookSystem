@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_4_0.xsd"
+           version="4.0">
+
+    <welcome-file-list>
+        <welcome-file>welcome.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>JdbcUserBorrow</servlet-name>
+        <servlet-class>com.book.web3.JdbcUserBorrowed</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JdbcUserBorrow</servlet-name>
+        <url-pattern>/userborrow.do</url-pattern>  <!-- 根据不同的url来调用不同的servlet来进行处理。 -->
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>JdbcFindServlet</servlet-name>
+        <servlet-class>com.book.web3.JdbcFindServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JdbcFindServlet</servlet-name>
+        <url-pattern>/findServlet.do</url-pattern>  <!-- 根据不同的url来调用不同的servlet来进行处理。 -->
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>JdbcDeleteServlet</servlet-name>
+        <servlet-class>com.book.web3.JdbcDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JdbcDeleteServlet</servlet-name>
+        <url-pattern>/deleteServlet.do</url-pattern>  <!-- 根据不同的url来调用不同的servlet来进行处理。 -->
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>JdbcUpdateServlet</servlet-name>
+        <servlet-class>com.book.web3.JdbcUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JdbcUpdateServlet</servlet-name>
+        <url-pattern>/updateServlet.do</url-pattern>  <!--根据不同的url来调用不同的servlet来进行处理。 -->
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>JdbcUserFindServlet</servlet-name>
+        <servlet-class>com.book.web3.JdbcUserFindServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JdbcUserFindServlet</servlet-name>
+        <url-pattern>/userfind.do</url-pattern>  <!--根据不同的url来调用不同的servlet来进行处理。 -->
+    </servlet-mapping>
+
+
+    <filter>
+        <filter-name>IllegalCharacterFilter</filter-name>
+        <filter-class>
+            com.liufeng.sys.filter.IllegalCharacterFilter
+        </filter-class>
+        <init-param>
+            <param-name>characterParams</param-name>
+            <param-value>',@</param-value><!-- 此处加入要过滤的字符或字符串，以逗号隔开 -->
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>IllegalCharacterFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+
+</web-app>

@@ -1,0 +1,28 @@
+#code{  
+    font-family:Arial;  
+    font-style:italic;  
+    font-weight:bold;  
+    border:0;  
+    letter-spacing:2px;  
+    color:black; 
+	
+}
+
+.button{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: 0;
+	background-color: #fff;
+	border: 0;
+	padding: 10px 15px;
+	color: #333;
+	border-radius: 3px;
+	width: 200px;
+	cursor: pointer;
+	font-family: microsoft yahei, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	-webkit-transition-duration: .25s;
+	transition-duration: .25s
+}
