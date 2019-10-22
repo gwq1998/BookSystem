@@ -33,11 +33,13 @@
         <div class="row">
             <div class="col-sm-2">
                 <form action="userborrow.do" method="post" class="btn-group">
-                <input type="hidden" name="userid" value="<%=name%>">
-                   <input type="submit" value="我的借阅" class="btn btn-primary">      
-            </form>
-                <button class="btn btn-primary" type="button" onclick="window.location.href='logout.jsp'">退出登录</button>
+                    <input type="hidden" name="userid" value="<%=name%>">
+                       <input type="submit" value="我的借阅" class="btn btn-primary">      
+                </form>
+                <button class="btn btn-primary" type="button" onclick="window.location.href='userfind.do'">退出登录</button></br>
+                <button class="btn btn-primary" type="button" onclick="window.location.href='userfind.do'">返回</button>
             </div>
+
             <div class="col-sm-8">
                 <table class="table table-striped">
                     <thead>
@@ -96,7 +98,7 @@
             </div>
             <div class="col-sm-2">
                 <form class="form-search" action="serach.do">
-                    <input class="form-control" type="text" name="bookname" /> <button type="submit" class="btn">搜索</button>
+                    <input class="form-control" type="text" name="bookname"/> <button type="submit" class="btn">搜索</button>
                 </form>
             </div>
         </div>

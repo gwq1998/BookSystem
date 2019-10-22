@@ -20,6 +20,17 @@
 
 
     <servlet>
+        <servlet-name>JdbcSearchServlet</servlet-name>
+        <servlet-class>com.book.web3.JdbcSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JdbcSearchServlet</servlet-name>
+        <url-pattern>/serach.do</url-pattern>  <!-- 根据不同的url来调用不同的servlet来进行处理。 -->
+    </servlet-mapping>
+
+
+
+    <servlet>
         <servlet-name>JdbcFindServlet</servlet-name>
         <servlet-class>com.book.web3.JdbcFindServlet</servlet-class>
     </servlet>
