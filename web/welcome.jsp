@@ -36,6 +36,7 @@
 				<div class="containerT">	
 				<div id="register" align="right" >
 					<a style="right:3%;" href="register.jsp">注册</a>
+					<a style="right:3%;" href="changepassword.jsp">忘记密码？</a>
 				</div>
 					<h1>用户登录</h1>
 					<form class="form" id="entry_form" name="login" action="login.jsp" method="post">
@@ -47,7 +48,6 @@
 						<input type="button" class="button" id="code" onclick="createCode()" /><!-- 这里的type=“button”是yzm.css的button -->
 						
 						<input type="button" class="button" value="验证" onclick="vali()" /> <!-- 这里的type=“button”是yzm.css的button -->
-
 						<button type="submit" id="entry_btn" class="login" onclick="TryLogin()" disabled="true">登录</button>
 
 						<div id="prompt" class="prompt"></div>

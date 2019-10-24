@@ -53,7 +53,7 @@ public class IllegalCharacterFilter implements Filter {
         if (status) {
             PrintWriter out = servletresponse.getWriter();
             out
-                    .print("<script language='javascript'>alert(\"对不起！您输入内容含有非法字符。如：\\\"'\\\".等\");"
+                    .print("<script language='javascript'>alert(\"对不起！您输入内容含有非法字符。\");"
                             // + servletrequest.getRequestURL()
                             + "window.history.go(-1);</script>");
 

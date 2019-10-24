@@ -67,7 +67,6 @@
         <url-pattern>/userfind.do</url-pattern>  <!--根据不同的url来调用不同的servlet来进行处理。 -->
     </servlet-mapping>
 
-
     <filter>
         <filter-name>IllegalCharacterFilter</filter-name>
         <filter-class>
@@ -75,7 +74,7 @@
         </filter-class>
         <init-param>
             <param-name>characterParams</param-name>
-            <param-value>',@</param-value><!-- 此处加入要过滤的字符或字符串，以逗号隔开 -->
+            <param-value>',@,&lt;,&gt;,!,#,$,%,^,&amp;,&quot;,&apos;</param-value><!-- 此处加入要过滤的字符或字符串，以逗号隔开 -->
         </init-param>
     </filter>
     <filter-mapping>
@@ -83,6 +82,8 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-
+    <session-config>
+        <session-timeout>3</session-timeout>
+    </session-config>
 
 </web-app>
